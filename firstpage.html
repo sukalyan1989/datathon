@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Peta|Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="container app-container" style="padding: 0">
+                    <div class="header">
+                        <span class="heading">EzPay</span>
+                    </div>
+                    <div class="content" style="background-color: white">
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                        <canvas id="myChart2" width="100" height="40"></canvas>
+
+
+
+
+
+                    </div>
+                </div>
+                <div class="footer" style="width: 340px">
+                    <div class="row">
+                        <div class="col-md-3 bottom-link ">
+                            <span><a href="">Expenses</a></span>
+                        </div>
+                        <div class="col-md-3 bottom-link">
+                            <a href="">Transfer</a>
+                        </div>
+                        <div class="col-md-3 bottom-link">
+                            <a href="">Bill Pay</a>
+                        </div>
+                        <div class="col-md-3 bottom-link">
+                            <a href="">Offers</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style>
+    .bottom-link {
+        padding-top: 15px;
+
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #F1A208;
+        font-size: 10px;
+        font-family: 'Lexend Peta', sans-serif;
+    }
+
+    .footer {
+
+        height: 60px;
+        position: absolute;
+        bottom: 0px;
+        background-color: #052F5F;
+
+    }
+
+    .heading {
+        font-family: 'Permanent Marker', cursive;
+        color: #F1A208;
+        font-size: 40px;
+        text-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .row {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: black;
+        padding: 30px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+        background-color: #052F5F;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+    }
+
+    .app-container {
+        background-color: #06A77D;
+        height: 600px;
+    }
+</style>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Groceries', 'Clothing', 'Travel', 'Utilities', 'Fuel', 'Medicine'],
+            datasets: [{
+                label: 'Your Expense',
+                data: [12000, 19000, 3000, 5000, 2000, 3000],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+        }
+    });
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var myChart = new Chart(ctx2, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['You', 'Others'],
+            datasets: [{
+                label: 'you and world',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+        }
+    });
+    var x = "https://coolors.co/052f5f-005377-06a77d-d5c67a-f1a208"
+</script>

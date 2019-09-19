@@ -1,0 +1,58 @@
+body{
+    background-color: #FDF0D5
+}
+.container{
+    padding: 0px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 50px;
+    background-color: #331832;
+    color:#D81E5B;
+    font-family: 'Poiret One', cursive;
+    
+}
+header>span{
+    font-size: 30px;
+}
+.payment-container{
+    height: 400px;
+    padding: 0;
+
+}
+.payment-container-child{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    background-color: #C6D8D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    font-size: 80px;
+    color: #D81E5B;
+    font-family: 'Poiret One', cursive;
+    padding-top: 20px;
+}
+.transfer-container{
+    background-color: #C6D8D3;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background-color: #331832;
+    color:#F0544F;
+    font-family: 'Poiret One', cursive;
+}
+.user-list-container{
+    
+    background-color: #C6D8D3;
+
+}
